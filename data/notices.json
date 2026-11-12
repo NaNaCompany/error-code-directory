@@ -1,0 +1,82 @@
+[
+  {
+    "file": "microsoft-LICENSE.txt",
+    "family": "microsoft",
+    "sha256": "7183ef9749eb9b75e710a81a4c812a9405cc184f087500581a973e5929ac3f5e"
+  },
+  {
+    "file": "microsoft-LICENSE-CODE.txt",
+    "family": "microsoft",
+    "sha256": "91f7258203fd43ba6d6f7f72b644eaedee9e3430f035c053beb6f34052f045e2"
+  },
+  {
+    "file": "microsoft-README.md.txt",
+    "family": "microsoft",
+    "sha256": "5ed87f9a2cb72bfb42e19bde6bc2b92309f143950be1401e7037805b25121728"
+  },
+  {
+    "file": "platforms-Nodejs-LICENSE.txt.txt",
+    "family": "platforms",
+    "sha256": "cbc91dba25c546898544155e1c0fce897f00e3f1df0afc795b8da891d38f92d9"
+  },
+  {
+    "file": "platforms-PostgreSQL-license.txt.txt",
+    "family": "platforms",
+    "sha256": "b224efb49497ebd52c54ca640d7443f54da4874899757cd5c6731a909a6cb75b"
+  },
+  {
+    "file": "platforms-Python-license.txt.txt",
+    "family": "platforms",
+    "sha256": "92ecdb7351fc180b0f9678b4989292f4c03f10c004d97218719692c4b0f9eab0"
+  },
+  {
+    "file": "platforms-SQLite-public-domain.txt.txt",
+    "family": "platforms",
+    "sha256": "22952649b3b56a910dab28b28ddab94940284dba37bd8471ebb7849e2459e96c"
+  },
+  {
+    "file": "vendors-CC-BY-4.0.txt.txt",
+    "family": "vendors",
+    "sha256": "9ba9550ad48438d0836ddab3da480b3b69ffa0aac7b7878b5a0039e7ab429411"
+  },
+  {
+    "file": "vendors-cloudflare-CC-BY-4.0.txt.txt",
+    "family": "vendors",
+    "sha256": "9e5f1b3c610b9c2da5c313bf81d577a7d1acec686bdb0384edefa6df0f90cd94"
+  },
+  {
+    "file": "vendors-cloudflare-README.md.txt",
+    "family": "vendors",
+    "sha256": "72af7df8c677e936f1dbde38d3e8609d37e25696988f2079a8812cc0498f8f06"
+  },
+  {
+    "file": "vendors-firebase-footer.html.txt",
+    "family": "vendors",
+    "sha256": "7ef66d8942a90b7073586378ae5dd958d5f2831ca4c33811499d9d29ab0fa2b4"
+  },
+  {
+    "file": "vendors-github-CC-BY-4.0.txt.txt",
+    "family": "vendors",
+    "sha256": "12d3a82a7d1378e6f597ec23d63a081aeb6ec4bc8de2a76ee9dc96c34c6d7a1b"
+  },
+  {
+    "file": "vendors-github-README.md.txt",
+    "family": "vendors",
+    "sha256": "1adc06cb1008208c356da0982fc8b81ee6d006695aae02f8464370ad87d78a5d"
+  },
+  {
+    "file": "vendors-googleapis-Apache-2.0.txt.txt",
+    "family": "vendors",
+    "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4"
+  },
+  {
+    "file": "vendors-microsoft-entra-MIT.txt.txt",
+    "family": "vendors",
+    "sha256": "c2cfccb812fe482101a8f04597dfc5a9991a6b2748266c47ac91b6a5aae15383"
+  },
+  {
+    "file": "vendors-microsoft-entra-README.md.txt",
+    "family": "vendors",
+    "sha256": "32355274e726eb8981b4478aef7917313395ff7ca7be1904488c4adf8b818584"
+  }
+]

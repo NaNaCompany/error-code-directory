@@ -1,0 +1,98 @@
+{
+  "version": 1,
+  "title": "에러 코드 포털",
+  "home_page_url": "https://nanalab.kr/error-code-directory/",
+  "language": "ko",
+  "count": 4836,
+  "products": [
+    {
+      "vendor": "Cloudflare",
+      "product": "Cloudflare HTTP errors",
+      "count": 47
+    },
+    {
+      "vendor": "GitHub",
+      "product": "GitHub REST API validation",
+      "count": 6
+    },
+    {
+      "vendor": "Google",
+      "product": "Firebase Authentication Admin SDK",
+      "count": 56
+    },
+    {
+      "vendor": "Google",
+      "product": "Google APIs / gRPC",
+      "count": 17
+    },
+    {
+      "vendor": "Microsoft",
+      "product": "Microsoft Entra ID",
+      "count": 351
+    },
+    {
+      "vendor": "Microsoft",
+      "product": "Windows Installer 메시지",
+      "count": 543
+    },
+    {
+      "vendor": "Microsoft",
+      "product": "Windows Installer 반환 코드",
+      "count": 59
+    },
+    {
+      "vendor": "Microsoft",
+      "product": "Windows Win32",
+      "count": 2745
+    },
+    {
+      "vendor": "Microsoft",
+      "product": "Windows WinHTTP",
+      "count": 46
+    },
+    {
+      "vendor": "Microsoft",
+      "product": "Windows WinINet",
+      "count": 93
+    },
+    {
+      "vendor": "Node.js",
+      "product": "Node.js",
+      "count": 449
+    },
+    {
+      "vendor": "PostgreSQL",
+      "product": "PostgreSQL",
+      "count": 261
+    },
+    {
+      "vendor": "Python",
+      "product": "Python",
+      "count": 62
+    },
+    {
+      "vendor": "SQLite",
+      "product": "SQLite",
+      "count": 101
+    }
+  ],
+  "errors_url": "https://nanalab.kr/error-code-directory/api/errors.json",
+  "sources_url": "https://nanalab.kr/error-code-directory/api/sources.json",
+  "record_key": [
+    "product",
+    "code"
+  ],
+  "link_kinds": {
+    "troubleshooting": "해결 절차",
+    "diagnostic-guide": "일반 진단 가이드",
+    "reference": "코드 참고"
+  },
+  "link_scopes": {
+    "code-specific": "해당 코드 · 적용 환경 확인",
+    "product-guide": "제품 전반 · 해당 코드 전용 아님",
+    "code-reference": "정의·설명 · 해결 절차 아님"
+  },
+  "checked_dates": [
+    "2026-11-12"
+  ]
+}

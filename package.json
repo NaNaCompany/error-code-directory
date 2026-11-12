@@ -1,0 +1,11 @@
+{
+  "name": "error-code-directory",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "node tools/build.mjs",
+    "check": "node tools/build.mjs --check",
+    "test": "node --test --test-isolation=none tests/*.test.mjs",
+    "serve": "python tools/serve.py"
+  }
+}

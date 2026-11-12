@@ -1,0 +1,24 @@
+{
+  "records": 4836,
+  "products": {
+    "Cloudflare HTTP errors": 47,
+    "GitHub REST API validation": 6,
+    "Firebase Authentication Admin SDK": 56,
+    "Google APIs / gRPC": 17,
+    "Microsoft Entra ID": 351,
+    "Windows Installer 메시지": 543,
+    "Windows Installer 반환 코드": 59,
+    "Windows Win32": 2745,
+    "Windows WinHTTP": 46,
+    "Windows WinINet": 93,
+    "Node.js": 449,
+    "PostgreSQL": 261,
+    "Python": 62,
+    "SQLite": 101
+  },
+  "sources": 84,
+  "status": {
+    "error": 4699,
+    "status": 137
+  }
+}
