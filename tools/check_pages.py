@@ -2,6 +2,7 @@
 import pathlib,json,hashlib,re,html,concurrent.futures,xml.etree.ElementTree as ET,time
 app=pathlib.Path(__file__).resolve().parents[1];docs=app/'docs'
 load=lambda p:json.loads(p.read_text(encoding='utf-8'))
+ui=load(app/'src/ui-translations.json')
 manifest=load(docs/'build-manifest.json');files=manifest['files'];langs=['ko','en','ja','zh','es','de','fr','pt','ru'];records=load(app/'data/catalog.json');byid={r['id']:r for r in records};translations={l:load(app/'data/i18n'/f'{l}.json') for l in langs if l!='en'}
 assert len(records)==4836;assert manifest['html_pages']==45783;assert manifest['sitemap_urls']==45774
 prefix='/error-code-directory/';origin='https://nanalab.kr';ids=['G-2ZYSF0173P','GTM-NV2WWQXB','ca-pub-9767176956440077','9f3423bb0d034d91bbe1a12afeff2429']
@@ -36,6 +37,9 @@ def audit(item):
    m=native.search(text);assert m and m[1]==lang and html.unescape(m[2])==translations[lang]['messages'][code_id],name+' native description mismatch'
    provider=translations[lang].get('message_providers',{}).get(code_id,translations[lang]['provider']);assert html.escape(provider,quote=False) in text,name+' provider'
   assert all(html.escape(l['url'],quote=True).replace('&#x27;','&#39;') in text for l in r['solution_links']),name+' diagnostic link lost'
+  if '레거시' in r['situation']:
+   expected_label='레거시 · 지원 버전 확인' if lang=='ko' else ui[lang]['레거시 · 지원 버전 확인']
+   assert expected_label in text,name+' legacy version warning lost'
   detail=1
  if rel=='404.html':assert 'content="noindex,follow"' in text
  else:assert 'content="noindex' not in text
