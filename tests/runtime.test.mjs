@@ -8,9 +8,9 @@ class Element{
  addEventListener(type,fn){this.listeners[type]=fn;}hasAttribute(n){return n==='data-copy-code'&&!!this.dataset.copyCode||n==='data-copy-link'&&this.link;}
  focus(){this.focused=true;}scrollIntoView(){this.scrolled=true;}fire(type,event={}){return this.listeners[type]?.(event);}
 }
-async function boot({failed=false,clipboardFailure=false,queryPage=true}={}){
+async function boot({failed=false,clipboardFailure=false,queryPage=true,ui={},locale='ko-KR',base='/error-code-directory/'}={}){
  const ids=Object.fromEntries(['page-config','status',...(queryPage?['query','vendor','product','result-list','result-count','result-pager','results','clear']:[])].map(x=>[x,new Element()]));
- ids['page-config'].textContent=JSON.stringify({base:'/error-code-directory/',index:'/error-code-directory/assets/index.json',initial:records.slice(0,40),products:records.map(r=>({product:r.product,vendor:r.vendor}))});
+ ids['page-config'].textContent=JSON.stringify({base,index:'/error-code-directory/assets/index.json',initial:records.slice(0,40),products:records.map(r=>({product:r.product,vendor:r.vendor})),ui,locale,productLabels:{'Windows Installer 반환 코드':'Windows Installer return codes'}});
  const copy=new Element('button');copy.dataset.copyCode='ERROR_ACCESS_DENIED';const link=new Element('button');link.link=true;
  const requests=[],copied=[];
  const context={prepare,find,JSON,console,location:{origin:'https://nanalab.kr',pathname:'/error-code-directory/codes/windows-win32-5/'},navigator:{clipboard:{writeText:async s=>{if(clipboardFailure)throw Error('denied');copied.push(s);}}},document:{getElementById:id=>ids[id],querySelectorAll:()=>[copy,link],createElement:t=>new Element(t),createDocumentFragment:()=>new Element('fragment')},Option:function(text,value){const el=new Element('option',text);el.value=value;return el;},setTimeout:fn=>{fn();return 1;},clearTimeout:()=>{},fetch:async(url,opts)=>{requests.push({url,opts});if(failed)throw Error('offline');return{ok:true,json:async()=>({records})};}};
@@ -33,4 +33,11 @@ test('failed search-index fetch preserves static pagination and gives filtered f
 test('detail buttons copy exact code and canonical path; rejected clipboard gives fallback',async()=>{
  const {copy,link,copied}=await boot({queryPage:false});await copy.fire('click');await link.fire('click');assert.deepEqual(copied,['ERROR_ACCESS_DENIED','https://nanalab.kr/error-code-directory/codes/windows-win32-5/']);
  const denied=await boot({queryPage:false,clipboardFailure:true});await denied.copy.fire('click');assert.ok(denied.ids.status.textContent.includes('선택해 복사'));
+});
+test('localized runtime labels and links retain original product filter keys',async()=>{
+ const ui={'복사했습니다.':'Copied.','전체 제품':'All products','{count}개':'{count} codes','← 이전':'← Previous','다음 →':'Next →','일치하는 코드를 찾지 못했습니다.':'No matching codes.'};
+ const {ids,copy}=await boot({ui,locale:'en-US',base:'/error-code-directory/en/'});assert.equal(ids['result-count'].textContent,'4,836 codes');
+ ids.product.value='Windows Installer 반환 코드';ids.product.fire('change');assert.equal(ids['result-count'].textContent,'59 codes');
+ assert.ok(ids['result-list'].children[0].children.every(row=>row.children[0].children[0].href.startsWith('/error-code-directory/en/codes/')));
+ await copy.fire('click');assert.equal(ids.status.textContent,'Copied.');assert.equal(ids.product.value,'Windows Installer 반환 코드');
 });

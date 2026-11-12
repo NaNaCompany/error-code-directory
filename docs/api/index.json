@@ -1,8 +1,41 @@
 {
-  "version": 1,
+  "version": 2,
   "title": "에러 코드 포털",
   "home_page_url": "https://nanalab.kr/error-code-directory/",
   "language": "ko",
+  "languages": [
+    "ko",
+    "en",
+    "ja",
+    "zh",
+    "es",
+    "de",
+    "fr",
+    "pt",
+    "ru"
+  ],
+  "language_paths": {
+    "ko": "",
+    "en": "en/",
+    "ja": "ja/",
+    "zh": "zh/",
+    "es": "es/",
+    "de": "de/",
+    "fr": "fr/",
+    "pt": "pt/",
+    "ru": "ru/"
+  },
+  "translations": {
+    "ko": "https://nanalab.kr/error-code-directory/api/translations/ko.json",
+    "ja": "https://nanalab.kr/error-code-directory/api/translations/ja.json",
+    "zh": "https://nanalab.kr/error-code-directory/api/translations/zh.json",
+    "es": "https://nanalab.kr/error-code-directory/api/translations/es.json",
+    "de": "https://nanalab.kr/error-code-directory/api/translations/de.json",
+    "fr": "https://nanalab.kr/error-code-directory/api/translations/fr.json",
+    "pt": "https://nanalab.kr/error-code-directory/api/translations/pt.json",
+    "ru": "https://nanalab.kr/error-code-directory/api/translations/ru.json"
+  },
+  "translation_note": "Machine translations of official English descriptions; original text, sources and licenses retained in errors.json and sources.json.",
   "count": 4836,
   "products": [
     {

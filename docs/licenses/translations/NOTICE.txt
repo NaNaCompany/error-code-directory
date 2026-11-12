@@ -1,0 +1,24 @@
+Translation tools and model attribution
+
+Original error descriptions retain the author, source URL, license and modification notices shown on each code page. Translations are derivative explanatory copies, not official vendor translations. The English original is preserved for technical interpretation.
+
+Google Translate produced the Korean, Japanese, Chinese, Spanish and German descriptions and an initial subset of French descriptions. The remaining French, Portuguese and Russian descriptions were generated offline with OPUS-MT models using CTranslate2. Per-description provider names are retained in the translation data and displayed beside translations. No translation service is called when a visitor opens a page or searches.
+
+Original model creator: Language Technology Research Group, University of Helsinki / Helsinki-NLP, OPUS-MT contributors.
+Original EN-ROMANCE: https://huggingface.co/Helsinki-NLP/opus-mt-en-ROMANCE
+Original EN-RU: https://huggingface.co/Helsinki-NLP/opus-mt-en-ru
+Current upstream model cards identify Apache-2.0. The original OPUS-MT project's general model notice also identifies CC BY 4.0: https://github.com/Helsinki-NLP/OPUS-MT-train#pre-trained-models
+
+EN-ROMANCE conversion: manancode/opus-mt-en-ROMANCE-ctranslate2-android
+https://huggingface.co/manancode/opus-mt-en-ROMANCE-ctranslate2-android
+Revision c2fd9734fc50aae0833ca3bae66d53b4caeebfde; Apache-2.0.
+Model.bin SHA-256: 3a9e867591ef1b801028dd0692e29cd94a689b32738b5556be2e741e2d700211
+
+EN-RU conversion: rohanksaxena/opus-mt-en-ru
+https://huggingface.co/rohanksaxena/opus-mt-en-ru
+Revision 3e60bacffde1e346edc65b9d057be7d441872779; CC BY 4.0. Both this conversion's CC BY 4.0 notice and the upstream Apache-2.0 notice are preserved.
+Model.bin SHA-256: f5ae1da30bcb61e877c549be8fb5a434193893eb97509ccd0b954465f9a8f80c
+
+Runtime: CTranslate2 4.9.0, SentencePiece 0.2.3, CPU INT8, beam size 2. French/Portuguese target prefix and explicit source EOS were supplied. Long descriptions were split at 180 SentencePiece tokens; results were joined. Error code identifiers, source descriptions, links and publisher integrations were preserved. The model binaries are not redistributed with this website.
+
+References: Jorg Tiedemann et al., Democratizing neural machine translation with OPUS-MT, Language Resources and Evaluation 58, 713-755 (2023), https://doi.org/10.1007/s10579-023-09704-w . Jorg Tiedemann and Santhosh Thottingal, OPUS-MT: Building open translation services for the World, EAMT 2020.

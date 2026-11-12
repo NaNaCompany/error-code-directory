@@ -1,0 +1,7 @@
+* text=auto eol=lf
+*.png binary
+data/catalog.json -text
+data/notices/** -text
+docs/licenses/notices/** -text
+data/translation-notices/** -text
+docs/licenses/translations/** -text

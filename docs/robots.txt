@@ -2,3 +2,12 @@ User-agent: *
 Allow: /
 
 Sitemap: https://nanalab.kr/error-code-directory/sitemap.xml
+Sitemap: https://nanalab.kr/error-code-directory/sitemap-ko.xml
+Sitemap: https://nanalab.kr/error-code-directory/sitemap-en.xml
+Sitemap: https://nanalab.kr/error-code-directory/sitemap-ja.xml
+Sitemap: https://nanalab.kr/error-code-directory/sitemap-zh.xml
+Sitemap: https://nanalab.kr/error-code-directory/sitemap-es.xml
+Sitemap: https://nanalab.kr/error-code-directory/sitemap-de.xml
+Sitemap: https://nanalab.kr/error-code-directory/sitemap-fr.xml
+Sitemap: https://nanalab.kr/error-code-directory/sitemap-pt.xml
+Sitemap: https://nanalab.kr/error-code-directory/sitemap-ru.xml

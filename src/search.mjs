@@ -13,7 +13,7 @@ export function codeForms(record) {
   return [...forms];
 }
 export function prepare(records) {
-  return records.map(record=>({...record,_codes:codeForms(record).map(normalize),_search:normalize([record.vendor,record.product,record.code,...(record.aliases||[]),record.title,record.situation,record.message].join(' '))}));
+  return records.map(record=>({...record,_codes:codeForms(record).map(normalize),_search:normalize([record.vendor,record.product,record.code,...(record.aliases||[]),record.title,record.situation,record.message,record.original_message].join(' '))}));
 }
 function tokens(query) {
   return (normalize(query).match(/0x[0-9a-f]+|[a-z_][a-z0-9_./:-]*|\d+|[가-힣]+|[\p{L}\p{N}]+/gu)||[]).map(t=>t.replace(/[.:]+$/,''));
